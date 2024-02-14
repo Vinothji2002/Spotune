@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html xmlns:th="www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>Spotune | Registration</title>
+<link rel="stylesheet" th:href="@{/CSS/registrationStyle.css}" />
+</head>
+<body>	
+	<div>
+		<h1>Registration</h1>
+		<form action="registration" method="post">
+		<label>User name : </label>
+		<input type = "text" name = "username" />
+		<br>
+		<label>Email : </label>
+		<input type = "email" name = "email" placeholder="abc@example.com"/>
+		<br>
+		<label>Password : </label>
+		<input type = "password" name = "password" placeholder="Minimum 8 characters" minlength="8" pattern=".{8,}" />
+		<br>
+		<label>Gender : </label>
+		<input type = "radio" name = "gender" value = "male"/><span>Male</span>
+		<input type = "radio" name = "gender" value = "female"/><span>Female</span>
+		<input type = "radio" name = "gender" value = "other"/><span>Others</span>
+		<br>
+		<label>Role : </label>
+		<input type = "radio" name = "role" value = "admin"/><span>Admin</span>
+		<input type = "radio" name = "role" value = "customer"/><span>Customer</span>
+		<br>
+		<label>Address : </label>
+		<textarea name = "address"></textarea>
+		<br>
+		<input type="submit" value="Register"/>
+	</form>
+	</div>
+</body>
+</html>

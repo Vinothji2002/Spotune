@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html xmlns:th="www.thymeleaf.org">
+<head>
+	<meta charset="ISO-8859-1">
+	<title>Spotune | Customer Home</title>
+	<link rel="stylesheet" th:href="@{/CSS/customerHomeStyle.css}"/>
+</head>
+<body>
+	
+	<div th:unless="${isPremium}" class="outer">
+		<h1>SPO<span>T</span>UNE</h1>
+		<div  class="notpremium">
+			<form action="pay" method="get">
+				<button type="submit">Get Premium</button>
+			</form>
+			<form action="logout" method="get">
+				<button type="submit">Logout</button>
+			</form>
+		</div>
+	</div>
+	<div th:if="${isPremium}" class="premium">
+		<div class="outer">
+			<img th:src="@{/CSS/logo.png}" />
+			<div class="notpremium">
+				<form action="logout" method="get">
+					<button type="submit" id="logout">Logout</button>
+				</form>
+			</div>
+		</div>
+		<div class="table-contents">
+			<table border=1>
+				<thead>
+					<tr>
+						<th>Name</th>
+						<th>Artist</th>
+						<th>Genre</th>
+						<th>Play</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr th:each="song:${songs}">
+						<td th:text="${song.name}" class="songname"></td>
+						<td th:text="${song.artist}" class="songartist"></td>
+						<td th:text="${song.genre}" class="songgenre"></td>
+						<td class="song"><audio controls th:src="${song.link}"></audio>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+</body>
+</html>

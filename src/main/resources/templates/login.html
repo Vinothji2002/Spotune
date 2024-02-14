@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html xmlns:th="www.thymeleaf.org">
+<head>
+	<meta charset="ISO-8859-1">
+	<title>Spotune | Login</title>
+	<link rel="stylesheet" th:href="@{/CSS/loginStyle.css}" >
+</head>
+<body>
+	<div>
+		<h1>Login</h1>
+		<form action="validate" method="post">
+		<label>Email : </label> 
+		<input type="email" name="email" class="input-field" /> 
+		<br> 
+		<label>Password : </label> 
+		<input type="password" name="password" class="input-field" /> 
+		<br> 
+		<input type="submit" value="Login" class="login-button" />
+	</form>
+	</div>
+</body>
+</html>

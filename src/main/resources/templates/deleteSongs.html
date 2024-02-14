@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html xmlns:th="www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>Spotune | Delete Songs</title>
+</head>
+<body>
+	
+		<form action="deleteMarkedSongs" method="post">
+			<div th:each="song:${songs}">
+				<input type="checkbox" th:name="songList" th:value="${song.id}" />
+				<label th:text="${song.name}"></label>
+			</div>
+			<button type="submit">Delete</button>
+		</form>
+</body>
+</html>

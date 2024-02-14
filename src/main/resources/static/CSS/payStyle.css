@@ -1,0 +1,49 @@
+@charset "ISO-8859-1";
+body{
+			 background:url('7.png') no-repeat fixed ;
+			 background-size: cover;
+		}
+		.payment-page {
+		    font-family: 'Arial', sans-serif;
+		    color: #FFFFFF;
+		    margin: 20px;
+		    padding: 10px;
+		    display: flex;
+		    flex-direction: column;
+		    position: relative;
+		    top:100px;
+		}
+		
+		.payment-page h1 {
+		    color: rgb(253, 253, 253);
+		    margin-bottom: 10px;
+		}
+		
+		.payment-page li {
+		     line-height: 30px;
+		     font-size: 19px;
+		}
+		.payment-page li:hover{
+			font-weight: bold;
+			cursor:default;
+			color:yellow;
+			font-style:italic; 
+		}
+		#payment-form {
+		    display: flex;
+		}
+		
+		.buy-button {
+		    background-color:rgb(59, 59, 59);
+		    color: #FFFFFF;
+		    border: none;
+		    border-radius: 10px;
+		    padding: 10px;
+		    cursor: pointer;
+		    font-size: 16px;
+		    width:80px;
+		}
+		
+		.buy-button:hover {
+		    background-color:rgb(33, 33, 33);
+		}
